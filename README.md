@@ -16,6 +16,16 @@ Make sure to provide the correct path to the JSON file within `logger.py` and al
 You'll need to share your spreadsheet with the email address within your JSON key file (see `client_email`).
 
 
+Reboot
+-----------
+
+Setup a cronjob to always launch the logger on startup via `launcher.sh` while logging errors to our own logfile:
+
+```
+@reboot sh /home/pi/logger/launcher.sh >/home/pi/logger/logs/cronlog 2>&1
+```
+
+
 Links
 -----------
 
