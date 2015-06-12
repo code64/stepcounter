@@ -1,46 +1,35 @@
-import RPi.GPIO as GPIO
+import json
 import time
-import gdata.spreadsheet.service
-import os
-import subprocess
+import gspread
+import RPi.GPIO as GPIO
+from oauth2client.client import SignedJwtAssertionCredentials
 
-email = 'EMAIL'
-password = 'PASSWORD'
-spreadsheet_key = 'SPREADSHEET_KEY'
-worksheet_id = 'WORKSHEED_ID' # Probably od6
-
+# Hardware interface
 pin = 18
-count = 1
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(pin, GPIO.IN)
 
+# Log visitor to spreadsheet
 def log_visitor():
 
-   spr_client = gdata.spreadsheet.service.SpreadsheetsService()
-   spr_client.email = email
-   spr_client.password = password
-   spr_client.source = 'MCBW IR Logger'
-   spr_client.ProgrammaticLogin()
+    # OAuth
+    json_key = json.load(open('######.json')) # SERVICE ACCOUNT KEY
+    scope = ['https://spreadsheets.google.com/feeds']
 
-   dict = {}
-   dict['date'] = time.strftime('%d/%m/%Y')
-   dict['time'] = time.strftime('%H:%M:%S')
-   dict['event'] = 'MCBW'
-   dict['visitor'] = '1'
+    credentials = SignedJwtAssertionCredentials(json_key['client_email'], json_key['private_key'], scope)
+    gc = gspread.authorize(credentials)
 
-   entry = spr_client.InsertRow(dict, spreadsheet_key, worksheet_id)
-   if isinstance(entry, gdata.spreadsheet.SpreadsheetsList):
-     print 'Saved.'
-   else:
-     print 'Failed.'
-   return 0
+    # Spreadsheet
+    wks = gc.open_by_key('######') # SPREADSHEET KEY
+    ws = wks.get_worksheet(0)
 
+    # Append row: time, date, event, visitor
+    ws.append_row([time.strftime('%H:%M:%S'), time.strftime('%d/%m/%Y'), 'MC', '1'])
+
+# Listen for trigger
 try:
     while True:
         if GPIO.input(pin) == True:
             log_visitor()
-            count += 1
-            time.sleep(2)
 except KeyboardInterrupt:
-    GPIO.output(status, False)
     GPIO.cleanup()
