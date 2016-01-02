@@ -1,9 +1,9 @@
 Raspberry Pi Stepcounter
 ====
 
-Full tutorial and making of: http://code64.de/visionerdy/raspberry-pi-stepcounter/
+Full tutorial and making of: https://code64.de/visionerdy/raspberry-pi-stepcounter/
 
-Update and further information: http://code64.de/visionerdy/raspberry-pi-stepcounter-v2/
+Update and further information: https://code64.de/visionerdy/raspberry-pi-stepcounter-v2/
 
 
 How to use
