@@ -21,7 +21,7 @@ Icon
 *.idea
 
 # Logs
-/json/logs/*.json
+/examples/json/logs/*.json
 
 # Custom
-/json/mcbw
+/examples/json/mcbw
