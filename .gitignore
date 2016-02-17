@@ -19,3 +19,9 @@ Icon
 
 # PyCharm IDE
 *.idea
+
+# Logs
+/json/logs/*.json
+
+# Custom
+/json/mcbw
