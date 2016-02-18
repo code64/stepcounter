@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding=UTF-8
+# -*- coding: utf-8 -*-
 
 import time
 import ConfigParser
@@ -44,9 +44,9 @@ msg = {
         'Jeder unserer Besucher braucht 83 Stufen hier hinauf. Alle zusammen haben bisher %d Stufen erklommen. Awesome! #mcbw64'
     ],
     'meters': [
-        'Unsere fleißigen Besucher haben schon %d Höhenmeter geschafft. Weiter so! #mcbw64',
+        'Unsere fleissigen Besucher haben schon %d Höhenmeter geschafft. Weiter so! #mcbw64',
         'Der Weg ist das Ziel: Bisher wurden %d Meter erreicht. #mcbw64',
-        'It’s a long way to he top if you wanna rock’n’roll! Genauer gesagt %d Höhenmeter. #mcbw64',
+        'It\'s a long way to he top if you wanna rock\'n\'roll! Genauer gesagt %d Höhenmeter. #mcbw64',
         'Die Frauenkirche ist fast 100 Meter hoch. Wir haben schon %d Meter geschafft. #mcbw64',
         'Nichts für Menschen mit Höhenangst: zusammen haben wir %d Höhenmeter erreicht. #mcbw64',
         'Unser Stepcounter zählt fleissig mit: Bisher wurden %d Höhenmeter erreicht. #mcbw64',
