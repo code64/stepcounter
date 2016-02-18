@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding=UTF-8
 
 import time
 import ConfigParser
@@ -31,12 +32,20 @@ env = {
 # Dictionary with available messages
 msg = {
     'stairs': [
-        'MCBW64 Status: %d steps so far! #mcbw64',
-        'You\'ve just added 83 steps to a total of %d steps! #mcbw64'
+        'Unser Stepcounter zeigt aktuell %d Stufen an. #mcbw64',
+        'Auf zur Agentur mit der schönen Aussicht. Heute Abend gesamt %d Stufen. #mcbw64',
+        'Jeder unserer Besucher braucht 83 Stufen hier hinauf. Alle zusammen haben bisher %d Stufen erklommen. Awesome! #mcbw64'
     ],
     'meters': [
-        'MCBW64 Status: %d meters so far! #mcbw64',
-        'Today we\'ve mounted %d meters! #mcbw64'
+        'Unsere fleißigen Besucher haben schon %d Höhenmeter geschafft. Weiter so! #mcbw64',
+        'Der Weg ist das Ziel: Bisher wurden %d Meter erreicht. #mcbw64',
+        'It’s a long way to he top if you wanna rock’n’roll! Genauer gesagt %d Höhenmeter. #mcbw64',
+        'Die Frauenkirche ist fast 100 Meter hoch. Wir haben schon %d Meter geschafft. #mcbw64',
+        'Nichts für Menschen mit Höhenangst: zusammen haben wir %d Höhenmeter erreicht. #mcbw64',
+        'Unser Stepcounter zählt fleissig mit: Bisher wurden %d Höhenmeter erreicht. #mcbw64',
+        'Höhenluft schnuppern: Bei @CODE64 wurden heute %d Meter geklettert! #mcbw64',
+        'High way to @CODE64: %d Meter schafften die #MCBW Besucher bisher! #mcbw64',
+        'Nicht 8 Miles high, aber immerhin schon %d Meter zeigt unser Stepcounter an. #mcbw64'
     ]
 }
 
