@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd /path/to/logger/google
+cd /path/to/logger/json
 sudo python logger.py

@@ -29,6 +29,15 @@ Optional:
 - Append the _number of visitors_ (integer) to overwrite the starting point: `python ./twitter/logger.py 9`
 
 
+#### Reboot
+
+Setup a cronjob to always launch the logger on startup via `./twitter/launcher.sh` while logging errors to your logfile:
+
+```
+@reboot sh /path/to/logger/twitter/launcher.sh > /path/to/logger/twitter/logs/cronlog 2>&1
+```
+
+
 #### Links
 
 - [Python Twitter](https://github.com/bear/python-twitter)
@@ -53,6 +62,15 @@ Optional:
 - Append the _number of visitors_ (integer) to overwrite the starting point: `python ./json/logger.py 9`
 
 
+#### Reboot
+
+Setup a cronjob to always launch the logger on startup via `./json/launcher.sh` while logging errors to your logfile:
+
+```
+@reboot sh /path/to/logger/json/launcher.sh > /path/to/logger/json/logs/cronlog 2>&1
+```
+
+
 #### Links
 
 - [Server-Sent Events](https://en.wikipedia.org/wiki/Server-sent_events)
@@ -75,10 +93,10 @@ You'll need to share your sheet with the email address within your JSON key file
 
 #### Reboot
 
-Setup a cronjob to always launch the logger on startup via `./google/launcher.sh` while logging errors to our own logfile:
+Setup a cronjob to always launch the logger on startup via `./google/launcher.sh` while logging errors to your logfile:
 
 ```
-@reboot sh /home/pi/logger/launcher.sh >/home/pi/logger/logs/cronlog 2>&1
+@reboot sh /path/to/logger/google/launcher.sh > /path/to/logger/google/logs/cronlog 2>&1
 ```
 
 
