@@ -31,12 +31,12 @@ env = {
 # Dictionary with available messages
 msg = {
     'stairs': [
-        'MCBW64 Status: %d steps so far! #mcbw',
-        'You\'ve just added 83 steps to a total of %d steps! #mcbw'
+        'MCBW64 Status: %d steps so far! #mcbw64',
+        'You\'ve just added 83 steps to a total of %d steps! #mcbw64'
     ],
     'meters': [
-        'MCBW64 Status: %d meters so far! #mcbw',
-        'Today we\'ve mounted %d meters! #mcbw'
+        'MCBW64 Status: %d meters so far! #mcbw64',
+        'Today we\'ve mounted %d meters! #mcbw64'
     ]
 }
 
@@ -49,9 +49,12 @@ def get_message(key):
 
 # Post update to twitter
 def tweet(count):
-    key = random.choice(env.keys())
-    status = api.PostUpdate(get_message(key) % (count * env[key]))
-    print 'Visitor #%d just posted: %s' % (count, status.text)
+    try:
+        key = random.choice(env.keys())
+        status = api.PostUpdate(get_message(key) % (count * env[key]))
+        print 'Visitor #%d just posted: %s' % (count, status.text)
+    except Exception as error:
+        print error
 
 
 # Listen for trigger
