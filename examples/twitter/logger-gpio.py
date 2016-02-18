@@ -8,6 +8,7 @@ import twitter
 import random
 from random import randint
 import RPi.GPIO as GPIO
+import sys
 
 
 # Parse twitter-python config file
@@ -18,7 +19,7 @@ def get_tweetrc(key):
 
 
 # Software interface
-visitors = 0
+visitors = int(sys.argv[1]) if len(sys.argv) > 1 else 0
 api = twitter.Api(consumer_key=get_tweetrc('consumer_key'),
                   consumer_secret=get_tweetrc('consumer_secret'),
                   access_token_key=get_tweetrc('access_key'),

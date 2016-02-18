@@ -24,6 +24,11 @@ Enter the Twitter consumer and access tokens (respectively key and secret) withi
 Now you should be able to run `python ./twitter/logger.py` from the terminal to post the default messages (randomly) to Twitter.
 
 
+Optional: 
+
+- Append the _number of visitors_ (integer) to overwrite the starting point: `python ./twitter/logger.py 9`
+
+
 #### Links
 
 - [Python Twitter](https://github.com/bear/python-twitter)
@@ -41,6 +46,11 @@ Write check-ins to a JSON file.
 Run `python ./json/logger.py` from the terminal to update your JSON file: `./json/logs/data.json`
 
 There is also a simple tech-demo using the HTML5 server-sent event (SSE) EventSource API within the `./json/demo` folder.
+
+
+Optional: 
+
+- Append the _number of visitors_ (integer) to overwrite the starting point: `python ./json/logger.py 9`
 
 
 #### Links
