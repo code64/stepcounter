@@ -21,7 +21,12 @@ Icon
 *.idea
 
 # Logs
-/examples/json/logs/*.json
+/examples/google/logs/*
+/examples/json/logs/*
+/examples/twitter/logs/*
+
+# Files
+/examples/twitter/img/*.jpg
 
 # Custom
 /examples/json/mcbw
