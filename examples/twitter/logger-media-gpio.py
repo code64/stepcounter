@@ -68,7 +68,7 @@ def get_message(key):
 def get_picture(count):
     now = datetime.now()
     media = "./img/%d-%d-%d-%d%d_%d.jpg" % (now.year, now.month, now.day, now.minute, now.second, count)
-    os.system("sudo fswebcam -r 1280x720 -d /dev/video0 -v " + media)
+    os.system("sudo fswebcam -r 1280x720 -D 1 --no-banner -d /dev/video0 -v " + media)
     return media
 
 
