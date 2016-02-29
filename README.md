@@ -7,7 +7,7 @@
 ## Examples
 
 Currently there are three different examples to utilize the sensor via the Raspberry Pi GPIO pins. 
-Each example also has script without the GPIO dependency to allow quick tests without the hardware.
+Each example also has a script without the GPIO dependency to allow quick tests without the hardware interface.
 
 
 ### Example 1: Twitter
@@ -26,7 +26,7 @@ Now you should be able to run `python ./twitter/logger.py` from the terminal to 
 
 Optional: 
 
-- Append the _number of visitors_ (integer) to overwrite the starting point: `python ./twitter/logger.py 9`
+- Append the _number of visitors_ (integer) to overwrite the starting point: `python ./twitter/logger.py 3`
 
 
 #### Reboot
@@ -59,7 +59,7 @@ There is also a simple tech-demo using the HTML5 server-sent event (SSE) EventSo
 
 Optional: 
 
-- Append the _number of visitors_ (integer) to overwrite the starting point: `python ./json/logger.py 9`
+- Append the _number of visitors_ (integer) to overwrite the starting point: `python ./json/logger.py 3`
 
 
 #### Reboot
