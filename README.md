@@ -1,7 +1,8 @@
 # Raspberry Pi Sensor
 
 - [Tutorial and making of](https://code64.de/visionerdy/raspberry-pi-stepcounter/)
-- [Update and further information](https://code64.de/visionerdy/raspberry-pi-stepcounter-v2/)
+- [Raspberry Pi Stepcounter v2](https://code64.de/visionerdy/raspberry-pi-stepcounter-v2/)
+- [Raspberry Pi Stepcounter v3](https://code64.de/visionerdy/raspberry-pi-stepcounter-v3/)
 
 
 ## Examples
