@@ -5,10 +5,13 @@
 <body>
     <div id='visitors'></div>
 <script>
-  var source = new EventSource('server.php');
-  source.onmessage=function(event) {
-    document.getElementById('visitors').innerHTML+=event.data + '<br />';
-  };
+  if ( typeof( EventSource ) !== 'undefined' ) {
+    var source = new EventSource( 'server.php' );
+    source.onmessage = function( event ) {
+  	  var json = JSON.parse( event.data );
+      document.getElementById( 'visitors' ).innerHTML += json.data + '<br />';
+    };
+  }
 </script>
 </body>
 </html>
